@@ -8,7 +8,7 @@ return [
     'storage_configs' => [
         'file'  => [
             'class'     => FlockStore::class,
-            'construct' =>  runtime_path().'/lock',
+            'construct' =>  runtime_path('lock'),
         ],
         'redis' => [
             'class'     => RedisStore::class,
