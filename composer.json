@@ -18,7 +18,7 @@
   "extra": {
     "think": {
       "config": {
-        "lock": "config/lock.php"
+        "lock": "src/config.php"
       }
     }
   }
