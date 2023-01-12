@@ -1,0 +1,25 @@
+{
+  "name": "yzh52521/think-lock",
+  "type": "library",
+  "license": "MIT",
+  "description": "thinkphp lock plugin",
+  "require": {
+    "php": "^7.2|^8.0",
+    "symfony/lock": "^5.0|^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "yzh52521\\ThinkLock\\": "src"
+    }
+  },
+  "require-dev": {
+    "topthink/framework": "^6.0"
+  },
+  "extra": {
+    "think": {
+      "config": {
+        "lock": "config/lock.php"
+      }
+    }
+  }
+}
