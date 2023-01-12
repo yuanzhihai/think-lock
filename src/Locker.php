@@ -42,8 +42,8 @@ class Locker
     protected static function getLockFactory()
     {
         if (static::$factory === null) {
-            $storage       = config( 'lock.storage' );
-            $storageConfig = config( 'lock.storage_configs' )[$storage];
+            $storage       = config( 'lock.default' );
+            $storageConfig = config( 'lock.storage' )[$storage];
             if (is_callable( $storageConfig['construct'] )) {
                 $storageConfig['construct'] = call_user_func( $storageConfig['construct'] );
             }
