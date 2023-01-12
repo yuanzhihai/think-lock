@@ -6,7 +6,7 @@
 # 安装
 
 ```
-compoer require yzh52521/think-lock
+composer require yzh52521/think-lock
 ```
 # 使用
 
