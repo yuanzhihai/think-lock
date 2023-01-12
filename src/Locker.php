@@ -4,6 +4,7 @@ namespace yzh52521\ThinkLock;
 
 use Symfony\Component\Lock\LockFactory;
 use Symfony\Component\Lock\LockInterface;
+use Illuminate\Container\Container;
 
 /**
  * @method static LockInterface lock( string $key,?float $ttl = null,?bool $autoRelease = null,?string $prefix = null )
@@ -46,8 +47,7 @@ class Locker
             if (is_callable( $storageConfig['construct'] )) {
                 $storageConfig['construct'] = call_user_func( $storageConfig['construct'] );
             }
-            //  $storageInstance = Container::getInstance()->make($storageConfig['class'], $storageConfig['construct']);
-            $storageInstance = new $storageConfig['class']( $storageConfig['construct'] );
+              $storageInstance = Container::getInstance()->make($storageConfig['class'], $storageConfig['construct']);
             static::$factory = new LockFactory( $storageInstance );
         }
 

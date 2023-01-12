@@ -8,12 +8,16 @@ return [
     'storage_configs' => [
         'file'  => [
             'class'     => FlockStore::class,
-            'construct' =>  runtime_path('lock'),
+            'construct' => [
+                'lockPath' => runtime_path( 'lock' ),
+            ]
         ],
         'redis' => [
             'class'     => RedisStore::class,
             'construct' => function () {
-                return  \think\facade\Cache::store( 'redis' )->handler();
+                return [
+                    'redis' => \think\facade\Cache::store( 'redis' )->handler()
+                ];
             },
         ],
     ],
