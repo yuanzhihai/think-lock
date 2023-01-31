@@ -14,7 +14,7 @@
     }
   },
   "require-dev": {
-    "topthink/framework": "^6.0"
+    "topthink/framework": "^6|^8"
   },
   "extra": {
     "think": {
