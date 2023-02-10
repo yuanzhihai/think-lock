@@ -4,7 +4,7 @@ namespace yzh52521\ThinkLock;
 
 use Symfony\Component\Lock\LockFactory;
 use Symfony\Component\Lock\LockInterface;
-use Illuminate\Container\Container;
+use think\Container;
 
 /**
  * @method static LockInterface lock( string $key,?float $ttl = null,?bool $autoRelease = null,?string $prefix = null )

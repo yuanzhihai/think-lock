@@ -6,15 +6,12 @@
   "require": {
     "php": "^7.2|^8.0",
     "symfony/lock": "^5.0|^6.0",
-    "illuminate/container":"^8.0|^9.0"
+    "topthink/framework": ">=6.1.2"
   },
   "autoload": {
     "psr-4": {
       "yzh52521\\ThinkLock\\": "src"
     }
-  },
-  "require-dev": {
-    "topthink/framework": "^6|^8"
   },
   "extra": {
     "think": {
